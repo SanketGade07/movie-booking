@@ -9,7 +9,8 @@ const movieSchema = new mongoose.Schema({
   release_date: Date,
   rating: Number,
   cast: [String],        // Example: ["Actor A", "Actor B"]
-  crew: [String]         // Example: ["Director X", "Writer Y"]
+  crew: [String] ,        // Example: ["Director X", "Writer Y"]
+  src: String
 });
 
 module.exports = mongoose.model('Movie', movieSchema);

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const Movie = require('../models/movie.model');
+
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
@@ -13,4 +15,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+module.exports = connectDB;  
