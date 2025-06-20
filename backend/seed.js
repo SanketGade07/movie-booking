@@ -15,7 +15,7 @@ const movies = [
       rating: 8.4,
       cast: ["Jack Nicholson", "Shelley Duvall"],
       crew: ["Stanley Kubrick"],
-      src: "/images/the_shining.jpg"
+      src: "the_shining.jpg"
     },
     {
       title: "Inglourious Basterds",
@@ -27,7 +27,7 @@ const movies = [
       rating: 8.3,
       cast: ["Brad Pitt", "Mélanie Laurent"],
       crew: ["Quentin Tarantino"],
-      src: "/images/inglourious_basterds.jpg"
+      src: "inglourious_basterds.jpg"
     },
     {
       title: "The Dark Knight",
@@ -39,7 +39,7 @@ const movies = [
       rating: 9.0,
       cast: ["Christian Bale", "Heath Ledger"],
       crew: ["Christopher Nolan"],
-      src: "/images/the_dark_knight.jpg"
+      src: "the_dark_knight.jpg"
     },
     {
       title: "Fight Club",
@@ -51,7 +51,7 @@ const movies = [
       rating: 8.8,
       cast: ["Brad Pitt", "Edward Norton"],
       crew: ["David Fincher"],
-      src: "/images/fight_club.jpg"
+      src: "fight_club.jpg"
     },
     {
       title: "Se7en",
@@ -63,7 +63,7 @@ const movies = [
       rating: 8.6,
       cast: ["Brad Pitt", "Morgan Freeman"],
       crew: ["David Fincher"],
-      src: "/images/seven.jpg"
+      src: "se7en.jpg"
     },
     {
       title: "Shutter Island",
@@ -75,7 +75,7 @@ const movies = [
       rating: 8.2,
       cast: ["Leonardo DiCaprio", "Mark Ruffalo"],
       crew: ["Martin Scorsese"],
-      src: "/images/shutter_island.jpg"
+      src: "shutter_island.jpg"
     },
     {
       title: "Inception",
@@ -87,7 +87,7 @@ const movies = [
       rating: 8.8,
       cast: ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
       crew: ["Christopher Nolan"],
-      src: "/images/inception.jpg"
+      src: "inception.jpg"
     },
     {
       title: "2001: A Space Odyssey",
@@ -99,7 +99,7 @@ const movies = [
       rating: 8.3,
       cast: ["Keir Dullea", "Gary Lockwood"],
       crew: ["Stanley Kubrick"],
-      src: "/images/space_odyssey.jpg"
+      src: "space_odyssey.jpg"
     },
     {
       title: "A Clockwork Orange",
@@ -111,7 +111,7 @@ const movies = [
       rating: 8.3,
       cast: ["Malcolm McDowell", "Patrick Magee"],
       crew: ["Stanley Kubrick"],
-      src: "/images/clockwork_orange.jpg"
+      src: "clockwork_orange.jpg"
     },
     {
       title: "Interstellar",
@@ -123,7 +123,7 @@ const movies = [
       rating: 8.6,
       cast: ["Matthew McConaughey", "Anne Hathaway"],
       crew: ["Christopher Nolan"],
-      src: "/images/interstellar.jpg"
+      src: "interstellar.jpg"
     },
     {
       title: "Forrest Gump",
@@ -135,7 +135,7 @@ const movies = [
       rating: 8.8,
       cast: ["Tom Hanks", "Robin Wright"],
       crew: ["Robert Zemeckis", "Eric Roth"],
-      src: "/images/forrest_gump.jpg"
+      src: "forrest_gump.jpg"
     },
     {
         title: "The Apu Trilogy",
@@ -147,7 +147,7 @@ const movies = [
         rating: 8.5,
         cast: ["Soumitra Chatterjee"],
         crew: ["Satyajit Ray"],
-        src: "/images/apu_trilogy.jpg"
+        src: "apu_trilogy.jpg"
       }
       
   
@@ -155,18 +155,18 @@ const movies = [
 ];
 
 const seedMovies = async () => {
-    try {
-      await connectDB(); // Connect using db.js
-      await Movie.insertMany(movies);
-      console.log('✅ Movies seeded successfully!');
-      process.exit(); // Exit the script
-    } catch (error) {
-      console.error('❌ Seeding failed:', error);
-      process.exit(1);
-    }
-  };
-  
-  seedMovies();
+  try {
+    await connectDB(); // Connect using db.js
+    await Movie.insertMany(movies);
+    console.log('✅ Movies seeded successfully!');
+    process.exit(); // Exit the script
+  } catch (error) {
+    console.error('❌ Seeding failed:', error);
+    process.exit(1);
+  }
+};
+
+seedMovies();
 
 
 
@@ -181,4 +181,5 @@ const seedMovies = async () => {
 //   console.log("Deleted old data");
 //   process.exit();
 // }).catch(err => console.log("DB Error:", err));
+
 
