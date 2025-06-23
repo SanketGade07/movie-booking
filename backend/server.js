@@ -19,6 +19,7 @@ app.use(express.json());
 // Enable CORS for your frontend origin
 app.use(cors({
   origin: 'http://127.0.0.1:5500',
+  origin: 'https://movie-booking-roan.vercel.app'
 }));
 
 // Movie routes
