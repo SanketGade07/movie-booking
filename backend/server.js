@@ -17,10 +17,26 @@ const app = express();
 app.use(express.json());
 
 // Enable CORS for your frontend origin
+
+const allowedOrigins = [
+  'http://localhost:5500',
+  'https://movie-booking-roan.vercel.app/',
+  'http://127.0.0.1:5500'
+];
+
 app.use(cors({
-  origin: 'http://127.0.0.1:5500',
-  origin: 'https://movie-booking-roan.vercel.app'
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, etc.)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS not allowed for origin: ' + origin));
+    }
+  }
 }));
+
+
+
 
 // Movie routes
 app.use('/api/movies', movieRoutes);

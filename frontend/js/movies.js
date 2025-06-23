@@ -2,7 +2,13 @@ let movies = [];
 
 export async function getMovies() {
   try {
-    const baseURL=window.location.hostname==='localhost'?'http://localhost:5000':'https://movie-booking-backend-q6sq.onrender.com';
+    const baseURL=
+    (window.location.hostname==='127.0.0.1'||
+    window.location.hostname==='localhost')
+    ?'http://localhost:5000'
+    :
+    'https://movie-booking-backend-q6sq.onrender.com';
+
   
     const response = await fetch(`${baseURL}/api/movies`);
     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
