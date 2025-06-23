@@ -18,23 +18,29 @@ app.use(express.json());
 
 // Enable CORS for your frontend origin
 
+
+// ✅ Allowed origins for both local and production
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://127.0.0.1:5000',
+  'http://127.0.0.1:5500',
+  'http://localhost',
+  'http://127.0.0.1',
   'https://movie-booking-roan.vercel.app' 
 ];
 
+// ✅ Apply CORS with origin function
 app.use(cors({
   origin: function (origin, callback) {
-    console.log('🌍 CORS Origin:', origin);
+    console.log('🌍 Incoming Origin:', origin);
     if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true); // ✅ allow if origin is allowed or undefined (like curl/postman)
+      callback(null, true); // ✅ Allow origin
     } else {
-      callback(null, false); // ✅ silently reject instead of crashing
+      console.warn('❌ CORS Blocked Origin:', origin);
+      callback(null, false); // ❌ Block safely (no crash)
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
 
@@ -51,6 +57,13 @@ app.use('/images', express.static('frontend/images'));
 app.get('/', (req, res) => {
   res.send('🎬 Movie Booking API is running...');
 });
+
+// Global error handler to avoid silent 500 crashes
+app.use((err, req, res, next) => {
+  console.error('💥 Unhandled Error:', err.message);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;
