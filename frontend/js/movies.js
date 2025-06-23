@@ -2,10 +2,8 @@ let movies = [];
 
 export async function getMovies() {
   try {
-    let baseURL=window.location.origin;
-    if(baseURL!=='https://movie-booking-roan.vercel.app'){
-      baseURL='http://localhost:5000'
-    }
+    const baseURL=window.location.hostname==='localhost'?'http://localhost:5000':'https://movie-booking-backend-q6sq.onrender.com';
+  
     const response = await fetch(`${baseURL}/api/movies`);
     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
     movies = await response.json();
