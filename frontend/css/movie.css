@@ -14,7 +14,7 @@ body {
 .movie-header {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -32,6 +32,7 @@ body {
 .details h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .rating {
@@ -99,6 +100,7 @@ body {
 .person p {
   font-size: 0.9rem;
   margin-top: 8px;
+  text-transform: capitalize;
 }
 
 /* Dummy circular image container */
