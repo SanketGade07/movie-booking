@@ -11,148 +11,398 @@ const movies = [
       duration_minutes: 146,
       language: "English",
       genre: ["Horror", "Drama"],
+      rating:{
+        score:8.4,
+        reviews:"1.2M"
+      },
       release_date: new Date("1980-05-23"),
-      rating: 8.4,
-      cast: ["Jack Nicholson", "Shelley Duvall"],
-      crew: ["Stanley Kubrick"],
+      cast: [{
+        name:"Jack Nicholson",
+        role:"Actor",
+        image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/hBHcQIEa6P48HQAlLZkh0eKSSkG.jpg"
+      },
+      {
+        name:"Shelley Duvall",
+        role:"Actor",
+        image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/6lG3fmyhXatvyAG4X9WxwMWoPUS.jpg"
+      },
+      {
+        name:"Danny Lloyd",
+        role:"Actor",
+        image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/5pEmugZ6m25RB0cXbL4t5D4kZAO.jpg"
+      },
+      {
+        name:"Scatman Crothers",
+        role:"Actor",
+        image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/jf2ooubjE5tjBJwDI9Nla0M57m2.jpg"
+      },
+      {
+        name:"Barry Nelson",
+        role:"Actor",
+        image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/fSrHmvOxZJbeKpNM0uWGvha1aK9.jpg"
+      },
+      {
+        name:"Philip Stone",
+        role:"Actor",
+        image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/eRYDsJJPfFuOpZ8dTrk9qo5hnXK.jpg"
+      }
+    ],
+      crew: [
+        {
+          name:"Stanley Kubrick",
+          role:"Director",
+          image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/yFT0VyIelI9aegZrsAwOG5iVP4v.jpg"
+        },
+        {
+          name:"Michael Stevenson",
+          role:"Assistant Director",
+          image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/xGgGcLtVV9k4fVVvSs8wfUTAAsS.jpg"
+        },
+        {
+          name:"Martin Richards",
+          role:"Associate Producer ",
+          image:"https://media.themoviedb.org/t/p/w300_and_h450_bestv2/4CFeYvy7KTcOruzezpPIzBHlaX.jpg"
+        }
+      ],
       src: "the_shining.jpg"
-    },
-    {
-      title: "Inglourious Basterds",
-      description: "A group of Jewish-American soldiers plot to assassinate Nazi leaders in occupied France.",
-      duration_minutes: 153,
-      language: "English",
-      genre: ["Adventure", "Drama", "War"],
-      release_date: new Date("2009-08-21"),
-      rating: 8.3,
-      cast: ["Brad Pitt", "Mélanie Laurent"],
-      crew: ["Quentin Tarantino"],
-      src: "inglourious_basterds.jpg"
-    },
-    {
-      title: "The Dark Knight",
-      description: "Batman faces off against the Joker, a criminal mastermind who plunges Gotham into anarchy.",
-      duration_minutes: 152,
-      language: "English",
-      genre: ["Action", "Crime", "Drama"],
-      release_date: new Date("2008-07-18"),
-      rating: 9.0,
-      cast: ["Christian Bale", "Heath Ledger"],
-      crew: ["Christopher Nolan"],
-      src: "the_dark_knight.jpg"
-    },
-    {
-      title: "Fight Club",
-      description: "An insomniac office worker and a soap maker form an underground fight club that evolves into something more.",
-      duration_minutes: 139,
-      language: "English",
-      genre: ["Drama", "Thriller"],
-      release_date: new Date("1999-10-15"),
-      rating: 8.8,
-      cast: ["Brad Pitt", "Edward Norton"],
-      crew: ["David Fincher"],
-      src: "fight_club.jpg"
-    },
-    {
-      title: "Se7en",
-      description: "Two detectives hunt a serial killer who uses the seven deadly sins as motives.",
-      duration_minutes: 127,
-      language: "English",
-      genre: ["Crime", "Drama", "Mystery"],
-      release_date: new Date("1995-09-22"),
-      rating: 8.6,
-      cast: ["Brad Pitt", "Morgan Freeman"],
-      crew: ["David Fincher"],
-      src: "se7en.jpg"
-    },
-    {
-      title: "Shutter Island",
-      description: "A U.S. Marshal investigates the disappearance of a murderer from a hospital for the criminally insane.",
-      duration_minutes: 138,
-      language: "English",
-      genre: ["Mystery", "Thriller"],
-      release_date: new Date("2010-02-19"),
-      rating: 8.2,
-      cast: ["Leonardo DiCaprio", "Mark Ruffalo"],
-      crew: ["Martin Scorsese"],
-      src: "shutter_island.jpg"
-    },
-    {
-      title: "Inception",
-      description: "A thief who steals corporate secrets through dream-sharing is given a task of planting an idea into the mind of a CEO.",
-      duration_minutes: 148,
-      language: "English",
-      genre: ["Action", "Sci-Fi", "Thriller"],
-      release_date: new Date("2010-07-16"),
-      rating: 8.8,
-      cast: ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
-      crew: ["Christopher Nolan"],
-      src: "inception.jpg"
-    },
-    {
-      title: "2001: A Space Odyssey",
-      description: "A voyage to Jupiter turns into a fight between man and machine.",
-      duration_minutes: 149,
-      language: "English",
-      genre: ["Adventure", "Sci-Fi"],
-      release_date: new Date("1968-04-03"),
-      rating: 8.3,
-      cast: ["Keir Dullea", "Gary Lockwood"],
-      crew: ["Stanley Kubrick"],
-      src: "space_odyssey.jpg"
-    },
-    {
-      title: "A Clockwork Orange",
-      description: "In a dystopian future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment.",
-      duration_minutes: 136,
-      language: "English",
-      genre: ["Crime", "Drama", "Sci-Fi"],
-      release_date: new Date("1971-12-19"),
-      rating: 8.3,
-      cast: ["Malcolm McDowell", "Patrick Magee"],
-      crew: ["Stanley Kubrick"],
-      src: "clockwork_orange.jpg"
     },
     {
       title: "Interstellar",
       description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
       duration_minutes: 169,
-      language: "English",
+      language: ["English"],
       genre: ["Adventure", "Drama", "Sci-Fi"],
+      rating: {
+        score: 8.6,
+        reviews: "2.1M"
+      },
       release_date: new Date("2014-11-07"),
-      rating: 8.6,
-      cast: ["Matthew McConaughey", "Anne Hathaway"],
-      crew: ["Christopher Nolan"],
+      cast: [
+        {
+          name: "Matthew McConaughey",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/mXnH0YRvUbJXQpT0n3Y5GehRjOx.jpg"
+        },
+        {
+          name: "Anne Hathaway",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/e6PyuHZKghsM6I4n6ZK5umYfUq6.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Christopher Nolan",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/cnR6wHug3c6VxABPYyzJYdVtD2a.jpg"
+        }
+      ],
       src: "interstellar.jpg"
     },
     {
+      title: "Inception",
+      description: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+      duration_minutes: 148,
+      language: ["English", "Hindi", "Tamil"],
+      genre: ["Action", "Sci-Fi", "Thriller"],
+      rating: {
+        score: 8.8,
+        reviews: "2.7M"
+      },
+      release_date: new Date("2010-07-16"),
+      cast: [
+        {
+          name: "Leonardo DiCaprio",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/wpxZ9zN0tVfI4o8N0ZIm8elcgdM.jpg"
+        },
+        {
+          name: "Cillian Murphy",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Christopher Nolan",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/cnR6wHug3c6VxABPYyzJYdVtD2a.jpg"
+        }
+      ],
+      src: "inception.jpg"
+    },
+    {
+      title: "Se7en",
+      description: "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
+      duration_minutes: 127,
+      language: ["English"],
+      genre: ["Crime", "Drama", "Mystery"],
+      rating: {
+        score: 8.6,
+        reviews: "1.8M"
+      },
+      release_date: new Date("1995-09-22"),
+      cast: [
+        {
+          name: "Brad Pitt",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/kU3B75TyRiCgE270EyZnHjfivoq.jpg"
+        },
+        {
+          name: "Morgan Freeman",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/oIciQWr8VwKoR8TmAw1owaiZFyb.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "David Fincher",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/9KeGWWvYv6R0sX6fJ2QXoeR9zN7.jpg"
+        }
+      ],
+      src: "se7en.jpg"
+    },
+    {
+      title: "Shutter Island",
+      description: "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
+      duration_minutes: 138,
+      language: ["English"],
+      genre: ["Mystery", "Thriller"],
+      rating: {
+        score: 8.2,
+        reviews: "1.5M"
+      },
+      release_date: new Date("2010-02-19"),
+      cast: [
+        {
+          name: "Leonardo DiCaprio",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/wpxZ9zN0tVfI4o8N0ZIm8elcgdM.jpg"
+        },
+        {
+          name: "Mark Ruffalo",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/z3dvKqMNDQWk3QLxzumloQVR0pv.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Martin Scorsese",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/fLmgH4pDPrlC2l9WCcS2dEqrVwQ.jpg"
+        }
+      ],
+      src: "shutter_island.jpg"
+    },
+    {
       title: "Forrest Gump",
-      description: "The life story of Forrest Gump, a man with a low IQ who achieves great things and influences historical events.",
+      description: "The presidencies of Kennedy and Johnson, the Vietnam War, and more through the eyes of an Alabama man.",
       duration_minutes: 142,
-      language: "English",
+      language: ["English"],
       genre: ["Drama", "Romance"],
+      rating: {
+        score: 8.8,
+        reviews: "2.4M"
+      },
       release_date: new Date("1994-07-06"),
-      rating: 8.8,
-      cast: ["Tom Hanks", "Robin Wright"],
-      crew: ["Robert Zemeckis", "Eric Roth"],
+      cast: [
+        {
+          name: "Tom Hanks",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg"
+        },
+        {
+          name: "Robin Wright",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/wnVFvJ3MVfLoMT4YzsEJY2qVY9l.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Robert Zemeckis",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/4cdgwiO5nkQy01bbn3JwL6Uu6QA.jpg"
+        }
+      ],
       src: "forrest_gump.jpg"
     },
     {
-        title: "The Apu Trilogy",
-        description: "The story of a boy named Apu as he grows up in rural Bengal and eventually moves to the city.",
-        duration_minutes: 339,
-        language: "Bengali",
-        genre: ["Drama"],
-        release_date: new Date("1959-05-01"),
-        rating: 8.5,
-        cast: ["Soumitra Chatterjee"],
-        crew: ["Satyajit Ray"],
-        src: "apu_trilogy.jpg"
-      }
-      
+      title: "Fight Club",
+      description: "An insomniac office worker and a devil-may-care soap maker form an underground fight club.",
+      duration_minutes: 139,
+      language: ["English"],
+      genre: ["Drama"],
+      rating: {
+        score: 8.8,
+        reviews: "2.2M"
+      },
+      release_date: new Date("1999-10-15"),
+      cast: [
+        {
+          name: "Brad Pitt",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/kU3B75TyRiCgE270EyZnHjfivoq.jpg"
+        },
+        {
+          name: "Edward Norton",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/5XBzD5WuTyVQZeS4VI25z2moMeY.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "David Fincher",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/9KeGWWvYv6R0sX6fJ2QXoeR9zN7.jpg"
+        }
+      ],
+      src: "fight_club.jpg"
+    },
+    {
+      title: "2001: A Space Odyssey",
+      description: "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins.",
+      duration_minutes: 149,
+      language: ["English"],
+      genre: ["Sci-Fi"],
+      rating: {
+        score: 8.3,
+        reviews: "1.1M"
+      },
+      release_date: new Date("1968-04-03"),
+      cast: [
+        {
+          name: "Keir Dullea",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/3Q9aCiiYaxzFc78yApv6NAg9pgL.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Stanley Kubrick",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/yFT0VyIelI9aegZrsAwOG5iVP4v.jpg"
+        }
+      ],
+      src: "space_odyssey.jpg"
+    },
+    {
+      title: "The Dark Knight",
+      description: "Batman sets out to dismantle the remaining criminal organizations that plague Gotham.",
+      duration_minutes: 152,
+      language: ["English"],
+      genre: ["Action", "Crime", "Drama"],
+      rating: {
+        score: 9.0,
+        reviews: "2.8M"
+      },
+      release_date: new Date("2008-07-18"),
+      cast: [
+        {
+          name: "Christian Bale",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/qCpZn2e3dimwbryLnqxZuI88PTi.jpg"
+        },
+        {
+          name: "Heath Ledger",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/lv9fvWLn1BX8f1ZBBtdYR4OZZfU.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Christopher Nolan",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/cnR6wHug3c6VxABPYyzJYdVtD2a.jpg"
+        }
+      ],
+      src: "the_dark_knight.jpg"
+    },
+    {
+      title: "The Apu Trilogy",
+      description: "A Bengali trilogy following the childhood, adolescence, and adulthood of Apu in early 20th-century India.",
+      duration_minutes: 337,
+      language: ["Bengali"],
+      genre: ["Drama"],
+      rating: {
+        score: 8.5,
+        reviews: "300K"
+      },
+      release_date: new Date("1955-08-26"),
+      cast: [
+        {
+          name: "Soumitra Chatterjee",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/l8ZG3qxOVvJ8SaSsz3Vm3UewkWN.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Satyajit Ray",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/1UQ8VKT9oSgjQ2cmqYxU5PlUv6T.jpg"
+        }
+      ],
+      src: "apu_trilogy.jpg"
+    },
+    {
+      title: "Inglourious Basterds",
+      description: "In Nazi-occupied France, a group of Jewish soldiers plans to assassinate Nazi leaders.",
+      duration_minutes: 153,
+      language: ["English", "German", "French"],
+      genre: ["Adventure", "Drama", "War"],
+      rating: {
+        score: 8.3,
+        reviews: "1.9M"
+      },
+      release_date: new Date("2009-08-21"),
+      cast: [
+        {
+          name: "Brad Pitt",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/kU3B75TyRiCgE270EyZnHjfivoq.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Quentin Tarantino",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/wmUqvqxAP5JPnWx3OeXb6TgC5xR.jpg"
+        }
+      ],
+      src: "inglourious_basterds.jpg"
+    },
+    {
+      title: "A Clockwork Orange",
+      description: "In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment.",
+      duration_minutes: 136,
+      language: ["English"],
+      genre: ["Crime", "Drama", "Sci-Fi"],
+      rating: {
+        score: 8.3,
+        reviews: "1.4M"
+      },
+      release_date: new Date("1972-02-02"),
+      cast: [
+        {
+          name: "Malcolm McDowell",
+          role: "Actor",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/2gW8LfxeKmvljHYILzq9gAYjM0k.jpg"
+        }
+      ],
+      crew: [
+        {
+          name: "Stanley Kubrick",
+          role: "Director",
+          image: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/yFT0VyIelI9aegZrsAwOG5iVP4v.jpg"
+        }
+      ],
+      src: "clockwork_orange.jpg"
+    }
+  ];
   
   
-];
+  
+
 
 const seedMovies = async () => {
   try {
