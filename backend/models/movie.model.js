@@ -11,7 +11,6 @@ const movieSchema = new mongoose.Schema({
     reviews: String
   },
   release_date: Date,
-  rating: Number,
   cast: [
     {
       name:String,
