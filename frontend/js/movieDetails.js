@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
         const movie = await response.json();
+        document.title=`${movie.title} | Movie Booking`
 
         // Render movie Details after fetch
         
