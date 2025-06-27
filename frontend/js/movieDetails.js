@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const baseURL =
             window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
                 ? 'http://localhost:5000'
-                : 'https://movie-booking-backend-gd5g.onrender.com';
+                : 'https://movie-booking-backend-q6sq.onrender.com';
 
         const response = await fetch(`${baseURL}/api/movies/${movieId}`);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
