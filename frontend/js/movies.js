@@ -1,4 +1,3 @@
-let movies = [];
 
 export async function getMovies() {
   try {
@@ -12,8 +11,11 @@ export async function getMovies() {
   
     const response = await fetch(`${baseURL}/api/movies`);
     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
-    movies = await response.json();
-    renderMoviesList();
+    const movies = await response.json();
+
+    // Render Movies after response recieved from fetch
+    
+    renderMoviesList(movies);
   } catch (err) {
     console.error("Fetch error:", err);
   }
@@ -21,14 +23,15 @@ export async function getMovies() {
 
 function createMovieCard(movie) {
   return `
-    <a class="movie-card" href="movie.html?movie_id=${movie._id}">
+    <a class="movie-card" href="movie.html?movie_id=${movie._id}" data-id="${movie._id}">
       <img src="images/${movie.src}" alt="${movie.title}" />
       <div class="title">${movie.title}</div>
     </a>`;
 }
 
-function renderMoviesList() {
+function renderMoviesList(movies) {
   const container = document.querySelector('.movie-grid');
   if (!container) return;
   container.innerHTML = movies.map(createMovieCard).join('');
 }
+
