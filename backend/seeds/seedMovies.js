@@ -1,5 +1,5 @@
-const Movie = require('./models/movie.model');
-const connectDB = require('./config/db');
+const Movie = require('../models/movie.model');
+const connectDB = require('../config/db');
 require('dotenv').config();
 const mongoose = require('mongoose');
 

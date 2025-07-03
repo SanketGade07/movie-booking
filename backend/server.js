@@ -6,7 +6,6 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const movieRoutes = require('./routes/movies.routes');
 
-dotenv.config();
 
 // Connect to MongoDB
 connectDB();
