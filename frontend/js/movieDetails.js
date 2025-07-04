@@ -44,7 +44,7 @@ function renderMovieHeader(movie){
         <div class="rating">⭐ IMDb: ${movie.rating.score}/10 (${movie.rating.reviews} Reviews)</div>
         <p class="languages">Available in: ${movie.language}</p>
         <p class="duration">${movie.duration_minutes}m  • ${movie.genre.join(', ')}</p>
-        <button class="book-btn">Book Tickets</button>
+        <a href="theatres.html"><button class="book-btn">Book Tickets</button></a>
       </div> `
 
 }

@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .theater {
+    background: white;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10%;
+    align-items: flex-start;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .details {
+    max-width: 275px;
+  }
+  
+  .details h3 {
+    margin: 0px 4px 10px 4px;
+    word-break: break-word;
+    color: rgb(51, 51, 51);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  
+  .features {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .features .icon-m-ticket  {
+    width: 80px;
+    vertical-align: middle;
+  }
+  .features .icon-food {
+    width: 125px;
+    vertical-align: middle;
+  }
+  .showtimes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-right: 25px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .show {
+    border-image: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-radius: 2px;
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: rgb(31, 173, 62);
+    width: 105px;
+    height: 40px;
+    padding: 5px 10px;
+    background: white;
+
+  }
+  
+  .show span {
+    display: block;
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+    margin-top: 2px;
+    font-weight: 400;
+  }
+  
+  .show:hover {
+    opacity: 0.75;
+  }
+  .cancellation {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 2px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .cancellation.available {
+    color: #4caf50; /* green */
+  }
+  
+  .cancellation.non {
+    color: #ff5722; /* orange/red */
+  }
+  
+  .fast-filling {
+    border-color: #ffa500;
+    border-left-color: #ffa500;
+    background: #fffbe6;
+  }
+  
