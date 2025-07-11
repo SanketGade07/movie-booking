@@ -7,7 +7,7 @@ router.get('/', movieController.getAllMovies);
 
 router.get('/:id', movieController.getMovieById);
 
-router.get('/:id/showtimes', ShowtimeController.getShowtimes);
+router.get('/:id/shows', ShowtimeController.getShowtimes);
 
 
 
